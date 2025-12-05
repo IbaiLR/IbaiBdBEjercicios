@@ -1,0 +1,4 @@
+Lo que voy a hacer ahora va a ser que cada click del carrusel te lleve a un apartado de la pagina, es decir, nada de hrefs
+-Sobre mi: Pequeño resumen de mi vida
+-A que me dedico: Entrenador Online y Desarrollador Web
+-Que es Ibai BdB
