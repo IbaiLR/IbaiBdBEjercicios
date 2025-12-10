@@ -14,9 +14,7 @@
     cursor: pointer;
 }
 
-.exercise-card:hover {
-    transform: translateY(-3px);
-}
+
 
 .exercise-title {
     font-family: "Lexend", sans-serif;
@@ -92,6 +90,33 @@
     cursor: pointer;
 }
 
+#modal-text {
+    max-height: 200px;              /* altura máxima visible */
+    overflow-y: auto;               /* aparece scrollbar si hace falta */
+    padding-right: 10px;            /* espacio para que no tape el texto */
+    line-height: 1.5;               /* para mejor lectura */
+}
+
+/* Scrollbar bonito (opcional) */
+#modal-text::-webkit-scrollbar {
+    width: 6px;
+}
+
+#modal-text::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+#modal-text::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+}
+
+#modal-text::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
 .exercise-buttons {
     display: flex;
     justify-content: center;
@@ -122,9 +147,7 @@
 .desktop-only {
     display: block;
 }
-.mobile-only {
-    display: none;
-}
+
 
 /* ===== MODAL NETFLIX ===== */
 #modalVideo {
@@ -173,7 +196,7 @@
     background: white;
     color: black;
     border: none;
-    border-radius: 50%;
+    border-radius: 15%;
     width: 32px;
     height: 32px;
     font-size: 18px;
@@ -182,15 +205,16 @@
     box-shadow: 0px 3px 12px rgba(0,0,0,0.4);
     transition: transform .15s ease;
 }
-
-.close-video:hover {
-    transform: scale(1.1);
+.close-video:hover{
+    background-color: red;
+    color: #ffffff;
 }
 
 
 
+
 /* Desktop MD+ → 3 columnas */
-@media (min-width: 768px) {
+@media (min-width: 1068px) {
     .exercise-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -201,23 +225,22 @@
     .desktop-only {
         display: none !important;
     }
-    .mobile-only {
-        display: inline-block;
-    }
-    .thumbnail-hover {
-            display: none !important;
-    }
     
+    .thumbnail-hover {
+        display: none !important;
+    }
 }
+    
+
 /* Tablet SM → 2 columnas */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 667px) and (max-width: 1067px) {
     .exercise-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Móvil XS → 1 columna */
-@media (max-width: 575px) {
+@media (max-width: 666px) {
     .exercise-grid {
         grid-template-columns: 1fr;
     }

@@ -12,7 +12,7 @@ document.querySelectorAll(".desc-btn").forEach(btn => {
     const desc = card.dataset.desc;
 
     modalTitle.textContent = title;
-    modalText.textContent = desc;
+    modalText.innerHTML = desc;
 
     modal.style.display = "flex";
   });
@@ -43,6 +43,7 @@ function openVideo(card) {
 
     videoSource.src = videoUrl;
     videoPlayer.load();
+    videoPlayer.play();
     modalVideo.style.display = "flex";
 }
 
