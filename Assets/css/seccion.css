@@ -1,0 +1,224 @@
+.exercise-grid {
+    display: grid;
+    gap: 25px;
+    padding: 20px;
+}
+
+.exercise-card {
+    background: #f7f7f7; /* mismo tono del header */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.exercise-card:hover {
+    transform: translateY(-3px);
+}
+
+.exercise-title {
+    font-family: "Lexend", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.exercise-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.exercise-thumbnail img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.thumbnail-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s ease;
+}
+
+.exercise-thumbnail:hover .thumbnail-hover {
+    opacity: 1;
+}
+
+.play-btn {
+    background: white;
+    color: black;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-family: "Lexend";
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-bg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+}
+
+.close-modal {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ddd;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: "Lexend";
+    cursor: pointer;
+}
+
+.exercise-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.exercise-btn {
+    background: #ddd;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Lexend", sans-serif;
+    cursor: pointer;
+    transition: background .2s ease;
+    font-weight: 600;
+    min-width: 120px;
+    text-align: center;
+}
+
+.exercise-btn:hover {
+    background: #ccc;
+}
+
+
+
+
+.desktop-only {
+    display: block;
+}
+.mobile-only {
+    display: none;
+}
+
+/* ===== MODAL NETFLIX ===== */
+#modalVideo {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn .25s ease;
+    z-index: 9999;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.video-modal {
+    position: relative;
+    width: 90%;
+    max-width: 750px;
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.4);
+    animation: popUp .25s ease;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+#video-player {
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Botón cerrar estilo Netflix */
+.close-video {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.4);
+    transition: transform .15s ease;
+}
+
+.close-video:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Desktop MD+ → 3 columnas */
+@media (min-width: 768px) {
+    .exercise-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+@media (max-width: 768px) {
+    /* En móvil/tablet NO hay hover */
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        display: inline-block;
+    }
+    .thumbnail-hover {
+            display: none !important;
+    }
+    
+}
+/* Tablet SM → 2 columnas */
+@media (min-width: 576px) and (max-width: 767px) {
+    .exercise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móvil XS → 1 columna */
+@media (max-width: 575px) {
+    .exercise-grid {
+        grid-template-columns: 1fr;
+    }
+}

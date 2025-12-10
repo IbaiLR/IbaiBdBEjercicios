@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibai BdB - Guía de Ejercicios</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../Assets/css/header.css" />
+    <link rel="stylesheet" href="../../Assets/css/seccion.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div
+        class="header-container d-flex align-items-center justify-content-center px-3 py-2 position-relative"
+      >
+        <a href="../../index.html">
+          <div
+            class="header-center d-flex align-items-center justify-content-center gap-2"
+          >
+            <h1 class="titulo-principal m-0">Guia de Ejercicios - Ibai BdB</h1>
+            <img src="../../img/logos/logo.png" alt="logo" class="header-logo" />
+          </div>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="exercise-grid">
+        <div
+          class="exercise-card"
+          data-title="Press banca"
+          data-desc="Ejercicio básico para trabajar el pectoral mayor, tríceps y deltoides anteriores. Mantén los pies firmes, baja la barra controlando el movimiento hasta el pecho y empuja de nuevo hasta bloquear los codos."
+          data-video="../../videos/press-banca.mp4"
+        >
+          <h3 class="exercise-title">Press banca</h3>
+
+          <div class="exercise-thumbnail">
+            <img src="../../img/miniaturas/pressBanca.png" alt="Press banca" />
+            <div class="thumbnail-hover">
+              <button class="play-btn desktop-only">▶ Reproducir</button>
+            </div>
+          </div>
+
+          <div class="exercise-buttons">
+            <button class="exercise-btn desc-btn">Ver descripción</button>
+            <button class="exercise-btn play-btn-inline mobile-only desc-btn">▶ Video</button>
+          </div>
+        </div>
+
+        <div
+          class="exercise-card"
+          data-title="Press banca"
+          data-desc="Ejercicio básico para trabajar el pectoral mayor, tríceps y deltoides anteriores. Mantén los pies firmes, baja la barra controlando el movimiento hasta el pecho y empuja de nuevo sin bloquear los codos."
+          data-video="videos/press-banca.mp4"
+        >
+          <h3 class="exercise-title">Press banca</h3>
+
+          <div class="exercise-thumbnail">
+            <img src="../../img/logo.png" alt="Press banca" />
+            <div class="thumbnail-hover">
+              <button class="play-btn desktop-only">▶ Reproducir</button>
+            </div>
+          </div>
+
+          <div class="exercise-buttons">
+            <button class="exercise-btn desc-btn">Ver descripción</button>
+            <button class="exercise-btn play-btn-inline mobile-only desc-btn">▶ Video</button>
+          </div>
+        </div>
+
+        <div
+        class="exercise-card"
+        data-title="Press banca"
+        data-desc="Ejercicio básico para trabajar el pectoral mayor, tríceps y deltoides anteriores. Mantén los pies firmes, baja la barra controlando el movimiento hasta el pecho y empuja de nuevo sin bloquear los codos."
+        data-video="videos/press-banca.mp4"
+      >
+        <h3 class="exercise-title">Press banca</h3>
+
+        <div class="exercise-thumbnail">
+          <img src="../../img/miniaturas/pressBanca.png" alt="Press banca" />
+          <div class="thumbnail-hover">
+            <button class="play-btn desktop-only">▶ Reproducir</button>
+          </div>
+        </div>
+
+        <div class="exercise-buttons">
+          <button class="exercise-btn desc-btn">Ver descripción</button>
+          <button class="exercise-btn play-btn-inline mobile-only desc-btn">▶ Video</button>
+        </div>
+      </div>
+      <div
+      class="exercise-card"
+      data-title="Press banca"
+      data-desc="Ejercicio básico para trabajar el pectoral mayor, tríceps y deltoides anteriores. Mantén los pies firmes, baja la barra controlando el movimiento hasta el pecho y empuja de nuevo sin bloquear los codos."
+      data-video="videos/press-banca.mp4"
+    >
+      <h3 class="exercise-title">Press banca</h3>
+
+      <div class="exercise-thumbnail">
+        <img src="img/miniaturas/press-banca.jpg" alt="Press banca" />
+        <div class="thumbnail-hover">
+          <button class="play-btn desktop-only">▶ Reproducir</button>
+        </div>
+      </div>
+
+      <div class="exercise-buttons">
+        <button class="exercise-btn desc-btn">Ver descripción</button>
+        <button class="exercise-btn play-btn-inline mobile-only desc-btn">▶ Video</button>
+      </div>
+    </div>
+
+        <!-- Repetir por cada ejercicio -->
+      </div>
+    </main>
+
+    <!-- Solo hace falta ponerlos una vez al final del body porque se carga con js -->
+    <div class="modal-bg" id="modalDesc">
+      <div class="modal-content">
+        <h3 id="modal-title"></h3>
+        <p id="modal-text"></p>
+        <button class="close-modal">Cerrar</button>
+      </div>
+    </div>
+
+    <div class="modal-bg" id="modalVideo">
+      <div class="video-modal">
+        
+        <button class="close-video">✕</button>
+    
+        <video id="video-player" controls>
+          <source id="video-source" src="" type="video/mp4">
+        </video>
+    
+      </div>
+    </div>
+    
+    
+
+    <script src="../../Assets/js/seccion.js"></script>
+  </body>
+</html>
