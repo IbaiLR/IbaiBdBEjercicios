@@ -1,3 +1,4 @@
+
 .exercise-grid {
     display: grid;
     gap: 25px;
@@ -151,13 +152,12 @@
 
 /* ===== MODAL NETFLIX ===== */
 #modalVideo {
-    position: fixed;
+  position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.85);
     display: none;
     justify-content: center;
     align-items: center;
-    animation: fadeIn .25s ease;
     z-index: 9999;
 }
 
@@ -166,15 +166,17 @@
     to   { opacity: 1; }
 }
 
-.video-modal {
+.video-wrapper {
     position: relative;
     width: 90%;
     max-width: 750px;
-    background: #111;
-    padding: 20px;
+}
+
+.video-modal {
+    aspect-ratio: 16 / 9;
+    background: black;
     border-radius: 12px;
-    box-shadow: 0px 12px 25px rgba(0,0,0,0.4);
-    animation: popUp .25s ease;
+    overflow: hidden;
 }
 
 @keyframes popUp {
@@ -184,30 +186,42 @@
 
 #video-player {
     width: 100%;
-    border-radius: 10px;
-    outline: none;
+    height: 100%;
+    object-fit: contain;   
+    background: black;
+    border-radius: 12px;
 }
 
 /* Botón cerrar estilo Netflix */
 .close-video {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -14px;
+    right: -14px;
+
+    width: 36px;
+    height: 36px;
+
     background: white;
     color: black;
     border: none;
-    border-radius: 15%;
-    width: 32px;
-    height: 32px;
+    border-radius: 10%;
+
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0px 3px 12px rgba(0,0,0,0.4);
-    transition: transform .15s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;             
+   
 }
-.close-video:hover{
-    background-color: red;
-    color: #ffffff;
+
+.close-video:hover {
+    background: red;
+    color: white;
+    
 }
 
 
