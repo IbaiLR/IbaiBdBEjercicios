@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibai BdB - Guía de Ejercicios</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fuente -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../img/logos/logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../Assets/css/header.css" />
+    <link rel="stylesheet" href="../Assets/css/seccion.css" />
+    <link rel="stylesheet" href="../Assets/css/footer.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <div
+        class="header-container d-flex align-items-center justify-content-center px-3 py-2 position-relative"
+      >
+        <a href="../index.html">
+          <div
+            class="header-center d-flex align-items-center justify-content-center gap-2"
+          >
+            <h1 class="titulo-principal m-0">Guía de Ejercicios - Ibai BdB</h1>
+            <img
+              src="../img/logos/logo.png"
+              alt="logo"
+              class="header-logo"
+            />
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <!-- TÍTULO SECCIÓN (JS lo rellena) -->
+    <div class="d-flex justify-content-center">
+      <h1 class="titulo-carrousel" id="sectionTitle"></h1>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+      <div class="exercise-grid" id="exerciseGrid"></div>
+    </main>
+
+    <!-- MODAL DESCRIPCIÓN -->
+    <div class="modal-bg" id="modalDesc">
+      <div class="modal-content">
+        <h3 id="modal-title"></h3>
+        <p id="modal-text"></p>
+        <button class="close-modal">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- MODAL VIDEO -->
+    <div id="modalVideo">
+      <div class="video-wrapper">
+        <button class="close-video">✕</button>
+
+        <div class="video-modal">
+          <video id="video-player" controls preload="metadata">
+            <source id="video-source" src="" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <a href="../index.html" class="btn btn-dark ">Volver al inicio</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/ibai.bdb"
+            target="_blank"
+            class="footer-item"
+          >
+            <img src="../img/logos/instagramImg.png" alt="Instagram" />
+            <span>@ibai.bdb</span>
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@ibai.bdb"
+            target="_blank"
+            class="footer-item"
+          >
+            <img src="../img/logos/tiktokImg.png" alt="TikTok" />
+            <span>@ibai.bdb</span>
+          </a>
+        </div>
+
+        <p class="footer-text">
+          © Ibai BdB — Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../Assets/js/datos.js"></script>
+    <script src="../Assets/js/seccion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

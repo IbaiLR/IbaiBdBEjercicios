@@ -1,3 +1,71 @@
+// ============================
+// CONFIGURACIÓN DE LA SECCIÓN
+// ============================
+
+// 🔥 músculo actual (prueba)
+const currentMuscle = "pectoral";
+
+// Título visible
+const muscleTitles = {
+  pectoral: "PECTORAL",
+  espalda: "ESPALDA",
+  hombro: "HOMBRO",
+  pierna: "PIERNA",
+  brazos: "BRAZOS"
+};
+
+// Pintar título
+const sectionTitle = document.getElementById("sectionTitle");
+if (sectionTitle) {
+  sectionTitle.textContent = muscleTitles[currentMuscle] || "";
+}
+
+// ============================
+// RENDER DE EJERCICIOS
+// ============================
+
+const grid = document.getElementById("exerciseGrid");
+
+// Filtrar ejercicios por músculo
+const filteredExercises = exercises.filter(
+  ex => ex.muscle === currentMuscle
+);
+
+// Crear card
+function createExerciseCard(ex) {
+  const card = document.createElement("div");
+  card.className = "exercise-card";
+
+  // Datos para modales
+  card.dataset.title = ex.title;
+  card.dataset.desc = ex.desc;
+  card.dataset.video = ex.video;
+
+  card.innerHTML = `
+    <h3 class="exercise-title">${ex.title}</h3>
+
+    <div class="exercise-thumbnail">
+      <img src="${ex.image}" alt="${ex.title}">
+      <div class="thumbnail-hover">
+        <button class="play-btn desktop-only">Reproducir</button>
+      </div>
+    </div>
+
+    <div class="exercise-buttons">
+      <button class="exercise-btn desc-btn">Ver descripción</button>
+      <button class="video-btn play-btn-inline">Video</button>
+    </div>
+  `;
+
+  return card;
+}
+
+// Pintar en el DOM
+filteredExercises.forEach(ex => {
+  grid.appendChild(createExerciseCard(ex));
+});
+
+
 const modal = document.getElementById("modalDesc");
 const modalTitle = document.getElementById("modal-title");
 const modalText = document.getElementById("modal-text");
