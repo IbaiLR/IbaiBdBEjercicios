@@ -252,14 +252,14 @@
     
 
 /* Tablet SM → 2 columnas */
-@media (min-width: 667px) and (max-width: 1067px) {
+@media (min-width: 700px) and (max-width: 1067px) {
     .exercise-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Móvil XS → 1 columna */
-@media (max-width: 666px) {
+@media (max-width: 699px) {
     .exercise-grid {
         grid-template-columns: 1fr;
     }
