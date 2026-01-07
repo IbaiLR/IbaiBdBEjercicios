@@ -2,8 +2,16 @@
 // CONFIGURACIÓN DE LA SECCIÓN
 // ============================
 
-// 🔥 músculo actual (prueba)
-const currentMuscle = "pectoral";
+// ============================
+// OBTENER MÚSCULO DESDE LA URL
+// ============================
+const params = new URLSearchParams(window.location.search);
+const currentMuscle = params.get("muscle");
+
+if (!currentMuscle) {
+  alert("No se ha especificado el músculo en la URL");
+}
+
 
 // Título visible
 const muscleTitles = {
@@ -52,7 +60,7 @@ function createExerciseCard(ex) {
     </div>
 
     <div class="exercise-buttons">
-      <button class="exercise-btn desc-btn">Ver descripción</button>
+      <button class="exercise-btn desc-btn">Descripción</button>
       <button class="video-btn play-btn-inline">Video</button>
     </div>
   `;
